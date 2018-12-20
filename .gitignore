@@ -1,6 +1,8 @@
 # python extensions
 
-python/Lib
+python/venv/Lib
+python/venv/Include
+
 python/.idea
 
 *.pyd
@@ -8,6 +10,10 @@ python/.idea
 *.exe
 *.exe.manifest
 *.dll
+*.cfg
+*.ps1
+python/venv/Scripts/easy_install-*
+python/venv/Scripts/pip*-script.py
 activate
 
 
