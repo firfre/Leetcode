@@ -1,0 +1,20 @@
+# python extensions
+
+python/Lib
+python/.idea
+
+*.pyd
+*.bat
+*.exe
+*.exe.manifest
+*.dll
+activate
+
+
+# java extensions
+java/.idea
+java/out
+java/java.iml
+
+# README
+README.html
