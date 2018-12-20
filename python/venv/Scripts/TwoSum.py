@@ -2,9 +2,9 @@
 
 class Solution(object):
     def twoSum(self, nums, target):
-        a ={}
+        a = {}
         for i, num in enumerate(nums):
-            if target-num in a:
+            if target - num in a:
                 return [a[target - num], i]
             else:
                 a[num] = i
