@@ -1,4 +1,6 @@
-class TwoSum(object):
+# example solution for Leetcode
+
+class Solution(object):
     def twoSum(self, nums, target):
         a ={}
         for i, num in enumerate(nums):
@@ -7,5 +9,8 @@ class TwoSum(object):
             else:
                 a[num] = i
 
-aTwoSum = TwoSum()
-print(aTwoSum.twoSum([2, 5, 7, 11], 12))
+def main():
+    aSolution = Solution()
+    print(aSolution.twoSum([2, 5, 7, 11], 12))
+
+main()

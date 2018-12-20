@@ -6,6 +6,7 @@ python/venv/Include
 python/.idea
 
 *.pyd
+*.pyc
 *.bat
 *.exe
 *.exe.manifest
