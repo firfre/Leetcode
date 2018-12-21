@@ -23,9 +23,25 @@ class Solution2:
                 res.append(res[j] + [nums[i]])
         return res
 
-aSolution = Solution1()
-print(aSolution.subsetsWithDup([1, 1, 2]))
 
-aSolution = Solution2()
-print(aSolution.subsetsWithDup([1, 2, 2]))
+def subsetsWithDup(nums, res):
+    if len(nums) == 0:
+        return res
 
+    if [nums[0]] in res:
+        for i in range(len(res)):
+            if nums[0] in res[i]:
+                res.append(res[i] + [nums[0]])
+    elif [nums[0]] not in res:
+        for i in range(len(res)):
+            res.append(res[i] + [nums[0]])
+
+    return subsetsWithDup(nums[1 : ], res)
+
+# aSolution = Solution1()
+# print(aSolution.subsetsWithDup([1, 1, 2]))
+#
+# aSolution = Solution2()
+# print(aSolution.subsetsWithDup([1, 2, 2]))
+
+print(subsetsWithDup([1, 1, 2], [[]]))
