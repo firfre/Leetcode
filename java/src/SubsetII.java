@@ -11,10 +11,8 @@ class SubsetII {
 
         for(int i = 0; i < numbers.length; i++) {
 
-            if(i == 0 || numbers[i] == numbers[i - 1]) {
+            if(i == 0 || numbers[i] != numbers[i - 1]) {
                 begin = 0;
-            } else {
-                begin = resultSize;
             }
             int resultSize = result.size();
             for (int j = begin; j < resultSize ; j++) {
@@ -22,13 +20,14 @@ class SubsetII {
                 aSubset.add(numbers[i]);
                 result.add(aSubset);
             }
+            begin = resultSize;
         }
 
         return(result);
     }
 
     public static void test() {
-        int[] numbers = {1, 2, 3};
+        int[] numbers = {1, 1, 2};
         List<List<Integer>> result = solution(numbers);
         for(List<Integer> oneSubSet : result) {
             System.out.println(oneSubSet);
