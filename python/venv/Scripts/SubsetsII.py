@@ -38,10 +38,15 @@ def subsetsWithDup(nums, res):
 
     return subsetsWithDup(nums[1 : ], res)
 
-# aSolution = Solution1()
-# print(aSolution.subsetsWithDup([1, 1, 2]))
-#
-# aSolution = Solution2()
-# print(aSolution.subsetsWithDup([1, 2, 2]))
+testInput = [1, 1, 2]
 
-print(subsetsWithDup([1, 1, 2], [[]]))
+aSolution = Solution1()
+print("Result of the first solution is: ")
+print(aSolution.subsetsWithDup(testInput))
+
+aSolution = Solution2()
+print("Result of the second solution is: ")
+print(aSolution.subsetsWithDup(testInput))
+
+print("Result of the third solution is: ")
+print(subsetsWithDup(testInput, [[]]))
